@@ -21,3 +21,21 @@ mv Друзья_человека.txt Новый_имя_друзья_челове
 mkdir Мои_животные               # Шаг 1: Создание директории
 mv Друзья_человека.txt Мои_животные/   # Шаг 2: Перемещение файла
 ls Мои_животные                 # Шаг 3: Проверка содержимого директории
+
+- Если WSL не установлен, выполните команду в PowerShell (от имени администратора):
+
+wsl --install
+
+- В терминале WSL выполните команду для добавления репозитория MySQL
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
+     sudo dpkg -i mysql-apt-config_0.8.22-1_all.deb
+
+sudo apt update
+
+Установите пакет MySQL:
+
+sudo apt install mysql-server
+
+Проверьте состояние MySQL:
+
+systemctl status mysql
